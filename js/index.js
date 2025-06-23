@@ -2,6 +2,8 @@ import env from "/js/env.js";
 
 const local_cache = localStorage.getItem("gh-cache");
 const cache = local_cache ? JSON.parse(local_cache) : {};
+const sprouts = document.getElementsByClassName("sprout");
+const sprout_scores = document.getElementsByClassName("sprout-score");
 
 const scores = {
     1: 0,
@@ -48,6 +50,13 @@ const query = `
     }
 `
 
+const updateSprout = () => {
+    for(let i = 0; i < 4; i++){
+        sprout_scores[i].innerText = scores[i+1];
+        sprouts[i].style.scale = (1 + (scores[i+1] * 0.003)).toString();
+    }
+}
+
 const get_contributions = async (username) => {
     if(cache[username]) {
         return cache[username].contributions
@@ -82,11 +91,8 @@ async function fetchData() {
                 if(!cls[stuIdx]) continue;
                 data[cls[stuIdx]] = await get_contributions(cls[stuIdx]);
                 scores[i+1] += data[cls[stuIdx]];
+                updateSprout();
             }
-        }
-        const sprouts = document.getElementsByClassName("sprout");
-        for(let i = 0; i < 4; i++){
-            sprouts[i].style.scale = (1 + (scores[i+1] * 0.003)).toString();
         }
     } catch (error) {
         console.error('Error fetching data:', error);
