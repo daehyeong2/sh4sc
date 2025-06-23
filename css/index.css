@@ -19,6 +19,7 @@ header {
     width: 100%;
     padding: 10px 0;
     gap: 5px;
+    z-index: 99;
 }
 
 header h1 {
@@ -117,6 +118,8 @@ main {
 
 .sprout {
     height: 30px;
+    transform-origin: center bottom;
+    transition: scale 1s ease-in-out;
 }
 
 .sprout_container h2 {

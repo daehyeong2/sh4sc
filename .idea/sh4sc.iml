@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="axios" level="application" />
+    <orderEntry type="library" name="cheerio" level="application" />
+    <orderEntry type="library" name="puppeteer" level="application" />
   </component>
 </module>
