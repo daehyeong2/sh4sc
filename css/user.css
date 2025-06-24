@@ -1,0 +1,73 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 0 30px;
+    padding-bottom: 150px;
+}
+
+.container {
+    margin-top: 80px;
+    max-height: 550px;
+    max-width: 1000px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    grid-template-rows: 150px 1fr;
+    gap: 20px;
+}
+
+.container section {
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+.user-details {
+    grid-column: span 2;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info__profile {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.user-info_box {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.user-info__contributions_value {
+    color: orangered;
+    font-weight: bold;
+}
+
+.user-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-stats__title {
+    font-size: 16px;
+}
+
+.user-stats__level {
+    font-size: 45px;
+    margin: 0 auto;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
