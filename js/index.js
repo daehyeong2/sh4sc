@@ -1,6 +1,5 @@
 import env from "/js/env.js";
 
-const username = localStorage.getItem("username");
 
 // 깃허브 API를 사용할 때 시간이 소요되므로 캐싱 시스템을 구축
 const local_cache = localStorage.getItem("gh-cache");
@@ -96,9 +95,10 @@ const query = `
 
 // 새로 업데이트된 점수들을 새싹 크기와 동기화
 const updateSprout = () => {
-    scores.sort((a, b) => b.score - a.score);
+    const ordered_scores = [...scores];
+    ordered_scores.sort((a, b) => b.score - a.score);
     for(let i = 0; i < 4; i++){
-        const score = scores[i]
+        const score = ordered_scores[i]
         // 화면 상의 커밋 합계를 최신 데이터와 동기화
         sprout_scores[score.classNo - 1].innerText = score.score;
         // 화면 상의 새싹 크기를 최신 커밋 합계 수와 동기화
@@ -108,23 +108,23 @@ const updateSprout = () => {
             case 0: {
                 title.innerHTML = "";
                 title.appendChild(firstBadge);
-                title.append(`${i+1}반`);
+                title.append(`${score.classNo}반`);
                 break;
             }
             case 1: {
                 title.innerHTML = "";
                 title.appendChild(secondBadge);
-                title.append(`${i+1}반`);
+                title.append(`${score.classNo}반`);
                 break;
             }
             case 2: {
                 title.innerHTML = "";
                 title.appendChild(thirdBadge);
-                title.append(`${i+1}반`);
+                title.append(`${score.classNo}반`);
                 break;
             }
             default: {
-                title.innerHTML = `${i+1}반`;
+                title.innerHTML = `${score.classNo}반`;
                 break;
             }
         }
@@ -174,7 +174,6 @@ async function fetchData() {
         for(let i = 0; i < 4; i++){
             const cls = classmate[i];
             for(let stuIdx = 0; stuIdx < cls.length; stuIdx++){
-                if(!cls[stuIdx]) continue;
                 // 학생의 커밋 수를 가져옴
                 data[cls[stuIdx]] = await get_contributions(cls[stuIdx], i+1);
                 // 학생의 반에 가져온 커밋 수를 더함
