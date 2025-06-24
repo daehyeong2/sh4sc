@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>새싹 - 랭킹</title>
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/rank.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="../images/logo.png" alt="logo" />
-        <h1>Sh4sc</h1>
+        <a href="./main.html">
+            <img class="logo" src="../images/logo.png" alt="logo" />
+            <h1>Sh4sc</h1>
+        </a>
     </header>
     <main>
         <table class="ranking-table">
@@ -69,18 +72,37 @@
             </tbody>
         </table>
     </main>
+    <footer>
+        <p>&copy; Sh4sc 2025 All rights reserved</p>
+        <ul>
+            <li>개인정보처리방침</li>
+            <li>이용약관</li>
+        </ul>
+    </footer>
     <nav>
         <ul>
-            <li>개인 랭킹</li>
+            <li>
+                AI 분석
+            </li>
+            <li>
+                <a href="./rank.html">
+                    개인 랭킹
+                </a>
+            </li>
             <li id="home-button">
                 <a href="./main.html">
                     <img src="../images/logo.png" alt="home-button" />
                 </a>
             </li>
-            <li>마이 페이지</li>
+            <li>
+                <a href="./user.html">마이 페이지</a>
+            </li>
+            <li>
+                성장 그래프
+            </li>
         </ul>
     </nav>
 
-    <script type="module" src="../js/index.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

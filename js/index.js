@@ -54,11 +54,15 @@ const classmate = [
         "leemsgm09",
         "JJH090501",
         "hsh0622",
+        "whrvty"
     ],
     // 2반 Github IDs
     [
         "chaeyn",
         "uhihi09",
+        "rmdkarhdwn",
+        "wusm1230",
+        "redJungi"
     ],
     // 3반 Github IDs
     [

@@ -4,9 +4,10 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     font-family: -apple-system sans-serif;
     display: flex;
+    padding-bottom: 80px;
     flex-direction: column;
 }
 
@@ -54,7 +55,7 @@ nav ul{
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
 }
 
 nav li {
@@ -112,6 +113,7 @@ nav li a:hover {
     align-items: center;
 }
 
+/* 팝업 스타일 */
 iframe {
     position: fixed;
     left: 10vw;
@@ -122,4 +124,29 @@ iframe {
     width: 80vw;
     border: 1px solid rgba(0,0,0,0.4);
     border-radius: 20px;
+}
+
+footer {
+    background-color: #333;
+    height: 100px;
+    color: white;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+footer ul li {
+    cursor: pointer;
+}
+
+footer ul li:first-child {
+    font-weight: bold;
 }
