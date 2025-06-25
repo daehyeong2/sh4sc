@@ -92,4 +92,8 @@ main {
         display: flex;
         flex-direction: column;
     }
+    .user-info {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
