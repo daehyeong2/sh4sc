@@ -57,7 +57,8 @@ const classmate = [
         "minjun1007",
         "JJH090501",
         "hsh0622",
-        "whrvty"
+        "whrvty",
+        "osy09"
     ],
     // 2반 Github IDs
     [

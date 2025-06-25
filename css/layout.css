@@ -154,3 +154,12 @@ footer ul li { /* 푸터 항목에 마우스 커서를 올렸을 때 */
 footer ul li:first-child { /* 첫 번째 항목 강조 */
     font-weight: bold;
 }
+
+#logout {
+    position: absolute;
+    right: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
