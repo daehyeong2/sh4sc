@@ -116,14 +116,16 @@ nav li a:hover { /* 마우스 올리면 색깔 바뀜 */
 /* 팝업 스타일 */
 iframe { /* iframe 팝업 위치 및 크기 설정 */
     position: fixed;
-    left: 10vw;
-    top: 10vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
     max-height: 300px;
     height: 100%;
     max-width: 500px;
     width: 80vw;
     border: 1px solid rgba(0,0,0,0.4);
-    border-radius: 20px;
+    border-radius: 100px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
 }
 /* 하단 바 스타일 */
 footer { /* 하단 푸터 영역 스타일 */

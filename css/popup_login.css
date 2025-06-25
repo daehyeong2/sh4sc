@@ -85,3 +85,7 @@ form {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+html, body { /* 스크롤바 없애기 */
+    overflow: hidden;
+}
