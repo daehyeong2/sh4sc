@@ -2,17 +2,42 @@ main { /* 메인 콘텐츠 영역: 화면 가운데 정렬 */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 80px - 93px); /* header + nav 높이 뺀 나머지 */
+    height: calc(100vh - 80px - 93px);
 }
 
 .ranking-table { /* 랭킹 테이블 스타일 */
-    width: 90%;
+    width: 100%;
+    max-width: 90%;
     border-collapse: collapse;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 테이블에 그림자 효과 */
 }
 
-.ranking-table th, .ranking-table td { /* 셀 기본 스타일 */
+.ranking-table tbody  /* 셀 기본 스타일 */
+    display: block;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.ranking-table tbody tr {
+    cursor: pointer;
+}
+
+table thead th:first-child, table tbody td:first-child {
+    width: 100px;
+}
+
+table thead th:last-child, table tbody td:last-child {
+    width: 100px;
+}
+
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ranking-table th, .ranking-table td {
     padding: 12px 16px;
     border-bottom: 1px solid #ddd;
     text-align: left;
@@ -42,4 +67,4 @@ main { /* 메인 콘텐츠 영역: 화면 가운데 정렬 */
     background-color: #eee;
     border-radius: 50%;
     display: inline-block;
-    }
+}

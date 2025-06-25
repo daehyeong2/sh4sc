@@ -47,11 +47,14 @@ const thirdBadge = createBadge("third", "3등");
 const classmate = [
     // 1반 Github Ids
     [
+        "kwontaeyeonn",
+        "anstjsdk",
         "2-dayeon",
         "daehyeong2",
         "L98293",
         "Finefinee",
         "leemsgm09",
+        "minjun1007",
         "JJH090501",
         "hsh0622",
         "whrvty"
@@ -66,12 +69,16 @@ const classmate = [
     ],
     // 3반 Github IDs
     [
+        "seunga418",
+        "itzjb",
     ],
     // 4반 Github IDs
     [
         "jdw09",
         "hoshino-love0102",
-        "gangmin0716"
+        "gangmin0716",
+        "hjbin-25",
+        "jdw09",
     ]
 ]
 

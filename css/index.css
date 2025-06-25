@@ -12,6 +12,8 @@ main { /* 메인 영역: 화면 하단에 콘텐츠 정렬 */
     flex-wrap: wrap; /* 줄바꿈 허용 (반응형) */
     width: 100%;
     padding: 20px;
+    max-height: 100%;
+    overflow-y: scroll;
     gap: 20px; /* 항목 사이 간격 */
 }
 
