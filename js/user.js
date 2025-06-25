@@ -22,9 +22,15 @@ if(flag){
 // 개인 랭킹을 통해 유저 페이지에 들어온 경우 view_user가 존재하므로 해당 유저로 user를 정의하고, 그렇지 않다면 현재 로그인한 계정의 정보로 정의함
 let user;
 if(view_user){
-    if(data[view_user]) user = data[view_user];
+    if(data[view_user]) {
+        user = data[view_user];
+        document.getElementById("grass").src = `https://ghchart.rshah.org/${view_user}`;
+    }
     localStorage.removeItem("view-user");
-} else user = data[username];
+} else {
+    user = data[username];
+    document.getElementById("grass").src = `https://ghchart.rshah.org/${username}`;
+}
 
 
 const avatar = document.querySelector(".user-info__profile");
