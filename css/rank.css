@@ -1,52 +1,42 @@
-main {
+main { /* 메인 콘텐츠 영역: 화면 가운데 정렬 */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 80px - 93px);
+    height: calc(100vh - 80px - 93px); /* header + nav 높이 뺀 나머지 */
 }
 
-.ranking-table {
+.ranking-table { /* 랭킹 테이블 스타일 */
     width: 90%;
-    /* max-width: ; */
     border-collapse: collapse;
     background-color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 테이블에 그림자 효과 */
 }
 
-.ranking-table th, .ranking-table td {
+.ranking-table th, .ranking-table td { /* 셀 기본 스타일 */
     padding: 12px 16px;
     border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
-.ranking-table th {
+.ranking-table th { /* 테이블 헤더 배경 */
     background-color: #f0f0f0;
 }
 
-.ranking-table tr:hover {
+.ranking-table tr:hover { /* 마우스 오버 시 행 배경 변경 */
     background-color: #f5f5f5;
 }
 
-.rank-num {
+.rank-num { /* 랭킹 번호 굵게 표시 */
     font-weight: bold;
 }
 
-.username {
+.username { /* 사용자명 셀: 아이콘과 텍스트 수평 정렬 */
     display: flex;
     align-items: center;
-    gap: 1vw;
+    gap: 1vw; /* 아이콘과 이름 간격 */
 }
 
-.tier {
-    color: #b48de3;
-    font-weight: bold;
-}
-
-.solved {
-    color: #555;
-}
-
-.icon {
+.icon { /* 사용자 아이콘 (원 모양 자리) */
     width: 20px;
     height: 20px;
     background-color: #eee;

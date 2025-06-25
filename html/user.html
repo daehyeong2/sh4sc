@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>유저 | 새싹</title>
+    <!-- 공통 레이아웃 스타일, 사용자 페이지 전용 스타일 -->
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
 <body>
+    <!-- 상단 헤더: 로고와 제목 클릭 시 메인으로 이동 -->
     <header>
         <a href="./main.html">
             <img class="logo" src="../images/logo.png" alt="logo" />
             <h1>Sh4sc</h1>
         </a>
     </header>
+    <!-- 메인 콘텐츠 영역 -->
     <main>
         <div class="container">
+            <!-- 사용자 프로필 및 커밋 정보 -->
             <section class="user-info">
                 <img class="user-info__profile" src="" alt="profile-image" />
                 <div class="user-info_box">
@@ -22,10 +26,12 @@
                     <p class="user-info__contributions">최근 1년간 커밋 수: <span class="user-info__contributions_value">250</span></p>
                 </div>
             </section>
+            <!-- 레벨 정보 -->
             <section class="user-stats">
                 <h3 class="user-stats__title">레벨:</h3>
                 <p class="user-stats__level">25</p>
             </section>
+            <!-- 반 기여도 및 AI 분석 내용 -->
             <section class="user-details">
                 <h3 class="user-details__class-contribution">반에 대한 기여도: <span class="user-details__class-contribution_value">15%</span></h3>
                 <hr />
@@ -35,6 +41,7 @@
             </section>
         </div>
     </main>
+    <!-- 하단 푸터 -->
     <footer>
         <p>&copy; Sh4sc 2025 All rights reserved</p>
         <ul>
@@ -42,6 +49,7 @@
             <li>이용약관</li>
         </ul>
     </footer>
+    <!-- 하단 고정 내비게이션 -->
     <nav>
         <ul>
             <li>
@@ -65,6 +73,7 @@
             </li>
         </ul>
     </nav>
+    <!-- JS 연결 -->
     <script src="../js/main.js"></script>
     <script src="../js/user.js"></script>
 </body>

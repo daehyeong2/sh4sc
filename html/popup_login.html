@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- 인코딩 및 반응형 설정 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sh4sc - Login</title>
+    <!-- 팝업 로그인 전용 스타일 -->
     <link rel="stylesheet" href="../css/popup_login.css">
 </head>
-    <body onselectstart = "return false">
+    <body onselectstart = "return false"> <!-- 텍스트 드래그 방지 -->
+        <!-- 로그인 박스 -->
         <div id="login-box">
+            <!-- 상단 아이콘 영역 -->
             <div id="icon-box">
                 <img width="50px" src="../images/logo.png" alt="새싹">
             </div>
+            <!-- GitHub 아이디 입력 안내 문구 -->
             <div id="text-git-id">
                 <p>GitHub 아이디</p>
             </div>
+            <!-- 입력 폼 -->
             <form>
                 <div id="input-id">
+                    <!-- GitHub 아이디 입력 -->
                     <input id="username" type="text" minlength="1" maxlength="20" placeholder="Github 아이디"/>
+                    <!-- 로그인 버튼 -->
                     <button type="submit">로그인</button>
                 </div>
+                <!-- 닫기 버튼 -->
                 <div id="close-box">
                     <button type="button" id="close">< 닫기</button>
                 </div>
             </form>
         </div>
+        <!-- 기능용 자바스크립트 -->
         <script src="../js/popup_login.js"></script>
     </body>
 </html>

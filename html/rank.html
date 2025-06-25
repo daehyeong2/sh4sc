@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 인코딩 및 반응형 설정 -->
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 문서 제목 및 스타일시트 불러오기 -->
     <title>새싹 - 랭킹</title>
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/rank.css">
+    <link rel="stylesheet" href="../css/layout.css"> <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="../css/rank.css"> <!-- 랭킹 전용 CSS -->
 </head>
 <body>
+    <!-- 상단 헤더 (로고 + 제목) -->
     <header>
         <a href="./main.html">
             <img class="logo" src="../images/logo.png" alt="logo" />
             <h1>Sh4sc</h1>
         </a>
     </header>
+    <!-- 메인 콘텐츠: 랭킹 테이블 -->
     <main>
         <table class="ranking-table">
             <thead>
@@ -24,6 +28,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- 랭킹 데이터 예시 (반복되는 구조) -->
                 <tr>
                     <td class="rank-num">1</td>
                     <td class="username"><span class="icon"></span> koosaga</td>
@@ -34,6 +39,7 @@
                     <td class="username"><span class="icon"></span> ainta</td>
                     <td class="commit">2,979</td>
                 </tr>
+                <!-- 동일한 사용자로 예시 반복 -->
                 <tr>
                     <td class="rank-num">3</td>
                     <td class="username"><span class="icon"></span> cki86201</td>
@@ -49,6 +55,7 @@
                     <td class="username"><span class="icon"></span> utilforever</td>
                     <td class="commit">2,445</td>
                 </tr>
+                <!-- 중복된 예시 데이터 -->
                 <tr>
                     <td class="rank-num">6</td>
                     <td class="username"><span class="icon"></span> utilforever</td>
@@ -72,6 +79,7 @@
             </tbody>
         </table>
     </main>
+    <!-- 하단 푸터 -->
     <footer>
         <p>&copy; Sh4sc 2025 All rights reserved</p>
         <ul>
@@ -79,6 +87,7 @@
             <li>이용약관</li>
         </ul>
     </footer>
+    <!-- 하단 고정 내비게이션 -->
     <nav>
         <ul>
             <li>
@@ -102,7 +111,7 @@
             </li>
         </ul>
     </nav>
-
+    <!-- JS 파일 연결 -->
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,67 +1,67 @@
 /*main 부분*/
-main {
+main { /* 메인 영역: 화면 하단에 콘텐츠 정렬 */
     display: flex;
-    align-items: end;
+    align-items: end; /* 콘텐츠를 아래로 정렬 */
     justify-content: center;
-    height: calc(100vh - 80px - 93px);
+    height: calc(100vh - 80px - 93px); /* header + nav 제외한 높이 */
 }
 
-.sprout_wrapper{
+.sprout_wrapper{ /* 새싹 컨테이너 전체 래퍼 */
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-around; /* 항목들 간격 자동 배분 */
+    flex-wrap: wrap; /* 줄바꿈 허용 (반응형) */
     width: 100%;
     padding: 20px;
-    gap: 20px;
+    gap: 20px; /* 항목 사이 간격 */
 }
 
-.sprout_container {
+.sprout_container { /* 각 반(1반~4반)별 새싹 박스 */
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: end;
     width: 200px;
-    min-height: 300px;
+    min-height: 300px; /* 줄어들지 않도록 최소 높이 확보 */
 }
 
-.sprout {
+.sprout { /* 새싹 이미지 스타일 */
     height: 30px;
-    transform-origin: center bottom;
-    transition: scale 1s ease-in-out;
+    transform-origin: center bottom; /* 아래 중심 기준으로 애니메이션 */
+    transition: scale 1s ease-in-out; /* 커밋 수에 따라 scale 변화 예정 */
 }
 
-.sprout_container h2 {
+.sprout_container h2 { /* 반 이름 텍스트 스타일 */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* 반 이름 옆에 순위 뱃지 등 붙일 때 여백 */
 }
 
-.rank {
+.rank { /* 랭킹 뱃지(1등, 2등, 3등 표시용) */
     font-size: 12px;
     padding: 3px 15px;
 }
 
-.first {
+.first { /* 1등 뱃지 스타일 */
     background-color: gold;
     color: white;
 }
 
-.second {
+.second { /* 2등 뱃지 스타일 */
     background-color: silver;
     color: black;
 }
 
-.third {
+.third { /* 3등 뱃지 스타일 */
     background-color: saddlebrown;
     color: white;
 }
 
-.sprout_container p {
+.sprout_container p { /* 하단 커밋 수 설명 텍스트 */
     font-size: 14px;
 }
 
-.sprout_container p span {
+.sprout_container p span { /* 커밋 수 숫자 강조 */
     font-size: 18px;
     color: orangered;
 }

@@ -1,3 +1,4 @@
+/* 로그인 박스 스타일 */
 #login-box {
     background-color: white;
     border-radius: 15px;
@@ -7,6 +8,7 @@
     align-items: center;
     flex-direction: column;
 }
+/* 로고 아이콘 박스 위치 조정 */
 #icon-box {
     width: 30px;
     height: 30px;
@@ -14,7 +16,7 @@
     margin-left: -30px;
     
 }
-
+/* 전체 페이지 배경 및 가운데 정렬 */
 body {
     background-color: lightgray;
     height: 100vh;
@@ -22,15 +24,16 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* 'GitHub 아이디' 텍스트 스타일 */
 #text-git-id {
     font-size: 13px;
     font-weight: 600;
-    align-self: flex-start;
+    align-self: flex-start; /* 왼쪽 정렬 */
     margin-left: 27px; 
     margin-top: 20px;
     margin-bottom: -15px;
 }
+/* 입력 및 로그인 버튼 래퍼 */
 #input-id {
     width: 100%;
     display: flex;
@@ -38,7 +41,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+/* 아이디 입력창 */
 #input-id > input {
     align-self: center;
     width: 240px;
@@ -48,12 +51,12 @@ body {
     border: 1px solid rgba(0,0,0,0.4);
     padding: 3px 5px;
 }
-
+/* 폼 전체 영역 */
 form {
     width: 100%; 
 
 }
-
+/* 로그인 버튼 */
 #input-id > button {
     align-self: center;
     margin-top: 5px;
@@ -67,7 +70,7 @@ form {
     border: none;
     cursor: pointer;
 }
-
+/* 닫기 버튼 스타일 */
 #close {
     text-decoration: none;
     font-weight: 600;
@@ -77,7 +80,7 @@ form {
     background: none;
     border: none;
 }
-
+/* 닫기 버튼 위치 조정 */
 #close-box {
     margin-top: 20px;
     margin-left: 10px;

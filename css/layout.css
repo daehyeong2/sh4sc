@@ -1,9 +1,9 @@
-*{
+*{ /* 전체 기본 설정 - 여백 제거 */
     padding: 0;
     margin: 0;
 }
 
-body {
+body { /* 전체 페이지 기본 레이아웃 설정 */
     min-height: 100vh;
     font-family: -apple-system sans-serif;
     display: flex;
@@ -13,7 +13,7 @@ body {
 
 /* header 부분 */
 
-header {
+header { /* 헤더 스타일 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ header {
     z-index: 99;
 }
 
-header a {
+header a { /* 헤더 안의 링크 스타일 */
     display: flex;
     gap: 5px;
     justify-content: center;
@@ -31,14 +31,14 @@ header a {
     text-decoration: none;
 }
 
-header h1 {
+header h1 { /* 헤더 제목 아래로 내려줌 */
     position: relative;
     bottom: -5px;
 }
 
 /* nav 부분 */
 
-nav {
+nav { /* 하단 고정 내비게이션 바 */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -50,7 +50,7 @@ nav {
     border-top: 1px solid rgba(0,0,0,0.05);
 }
 
-nav ul{
+nav ul{ /* 내비게이션 내부 리스트 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,31 +58,31 @@ nav ul{
     gap: 20px;
 }
 
-nav li {
+nav li { /* 메뉴 항목 */
     cursor: pointer;
     font-size: 14px;
     color: rgba(0,0,0,0.6);
 }
 
-nav li a {
+nav li a { /* 메뉴 링크 스타일 */
     color: rgba(0,0,0,0.6);
     transition: color .05s ease-in-out;
     text-decoration: none;
 }
 
-nav li:hover {
+nav li:hover { /* 마우스 올리면 색깔 바뀜 */
     color: rgba(0,0,0,0.4);
 }
 
-nav li a:hover {
+nav li a:hover { /* 마우스 올리면 색깔 바뀜 */
     color: rgba(0,0,0,0.4);
 }
 
-.logo {
+.logo { /* 로고 이미지 크기 */
     height: 60px;
 }
 
-#home-button {
+#home-button { /* 홈 버튼 아이콘 스타일 */
     margin: 0 10px;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 50%;
@@ -92,20 +92,20 @@ nav li a:hover {
     transition: transform .2s ease-in-out;
 }
 
-#home-button:hover {
+#home-button:hover { /* 홈 버튼 hover 효과 */
     transform: translateY(-3px);
 }
 
-#home-button img {
+#home-button img { /* 홈 버튼 안의 이미지 */
     height: 80%;
     transition: scale .2s ease-in-out;
 }
 
-#home-button:hover img {
+#home-button:hover img { /* 이미지 hover 시 확대 효과 */
     scale: 1.2;
 }
 
-#home-button a {
+#home-button a { /* 홈 버튼 내부 링크 정렬 */
     height: 100%;
     width: 100%;
     display: flex;
@@ -114,7 +114,7 @@ nav li a:hover {
 }
 
 /* 팝업 스타일 */
-iframe {
+iframe { /* iframe 팝업 위치 및 크기 설정 */
     position: fixed;
     left: 10vw;
     top: 10vh;
@@ -125,8 +125,8 @@ iframe {
     border: 1px solid rgba(0,0,0,0.4);
     border-radius: 20px;
 }
-
-footer {
+/* 하단 바 스타일 */
+footer { /* 하단 푸터 영역 스타일 */
     background-color: #333;
     height: 100px;
     color: white;
@@ -137,16 +137,16 @@ footer {
     align-items: center;
 }
 
-footer ul {
+footer ul { /* 푸터 안의 리스트 정렬 */
     display: flex;
     gap: 10px;
     list-style: none;
 }
 
-footer ul li {
+footer ul li { /* 푸터 항목에 마우스 커서를 올렸을 때 */
     cursor: pointer;
 }
 
-footer ul li:first-child {
+footer ul li:first-child { /* 첫 번째 항목 강조 */
     font-weight: bold;
 }

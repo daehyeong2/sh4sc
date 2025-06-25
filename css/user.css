@@ -1,70 +1,72 @@
+/* 메인 콘텐츠를 화면 가운데 정렬 */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px - 93px);
+    height: calc(100vh - 80px - 93px); /* header + nav 제외한 높이 */
     padding: 0 30px;
 }
-
+/* 전체 콘텐츠 컨테이너 (그리드 레이아웃 적용) */
 .container {
-    margin-top: 80px;
+    margin-top: 80px; /* 헤더와 간격 */
     max-height: 550px;
     max-width: 1000px;
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 150px;
-    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr 150px; /* 좌측 넓게, 우측 좁게 */
+    grid-template-rows: 150px 1fr; /* 상단 150px, 나머지 자동 */
     gap: 20px;
 }
-
+/* 각 section의 공통 테두리와 패딩 */
 .container section {
     border-radius: 20px;
     border: 1px solid rgba(0,0,0,0.2);
     padding: 30px;
 }
 
+/* 마지막 section(user-details)은 전체 너비 사용 */
 .user-details {
-    grid-column: span 2;
+    grid-column: span 2; /* 2열 전체 차지 */
 }
-
+/* 유저 정보 영역 (프로필 + 텍스트 수평 배치) */
 .user-info {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
+/* 프로필 이미지 스타일 */
 .user-info__profile {
     height: 100%;
     border-radius: 10px;
 }
-
+/* 이름 + 커밋 수 박스 */
 .user-info_box {
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
-
+/* 커밋 수 강조 */
 .user-info__contributions_value {
     color: orangered;
     font-weight: bold;
 }
-
+/* 유저 레벨 박스 */
 .user-stats {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+/* '레벨:' 제목 */
 .user-stats__title {
     font-size: 16px;
 }
-
+/* 레벨 숫자 강조 스타일 */
 .user-stats__level {
     font-size: 45px;
-    margin: 0 auto;
+    margin: 0 auto; /* 가운데 정렬 */
 }
-
+/* AI 분석 포함한 세부 정보 박스 */
 .user-details {
     display: flex;
     flex-direction: column;
