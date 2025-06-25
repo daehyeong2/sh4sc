@@ -13,7 +13,7 @@ main { /* 메인 콘텐츠 영역: 화면 가운데 정렬 */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 테이블에 그림자 효과 */
 }
 
-.ranking-table tbody  /* 셀 기본 스타일 */
+.ranking-table tbody { /* 셀 기본 스타일 */
     display: block;
     max-height: 50vh;
     overflow-y: scroll;
