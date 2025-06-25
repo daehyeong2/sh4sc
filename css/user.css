@@ -79,6 +79,10 @@ main {
     gap: 20px;
 }
 
+#github-link {
+    height: 100%;
+}
+
 /* 가로 픽셀 1024 이하일 경우 마이 페이지의 그리드 박스를 플렉스 박스로 변경 */
 @media screen and (max-width: 1024px) {
     :root {

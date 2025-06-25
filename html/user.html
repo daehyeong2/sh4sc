@@ -11,7 +11,7 @@
     <!-- 상단 헤더: 로고와 제목 클릭 시 메인으로 이동 -->
     <header>
         <a href="./main.html">
-            <img class="logo" src="../images/logo.png" alt="logo" />
+                <img class="logo" src="../images/logo.png" alt="logo" />
             <h1>Sh4sc</h1>
         </a>
         <button id="logout">로그아웃</button>
@@ -21,7 +21,9 @@
         <div class="container">
             <!-- 사용자 프로필 및 커밋 정보 -->
             <section class="user-info">
-                <img class="user-info__profile" src="" alt="profile-image" />
+                <a id="github-link" target="_blank">
+                    <img class="user-info__profile" src="" alt="profile-image" />
+                </a>
                 <div class="user-info_box">
                     <h2 class="user-info__name"></h2>
                     <p class="user-info__contributions">최근 1년간 커밋 수: <span class="user-info__contributions_value">250</span></p>

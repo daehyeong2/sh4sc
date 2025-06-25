@@ -77,7 +77,8 @@ const username_element = document.querySelector(".user-info__name");
 const personal_contributions_element = document.querySelector(".user-info__contributions_value");
 const level = document.querySelector(".user-stats__level");
 const class_contributions = document.querySelector(".user-details__class-contribution_value");
-const personal_analysis = document.querySelector(".user-details__ai-analysis");
+const githubLink = document.getElementById("github-link");
+
 
 // 화면에 사용자 데이터 출력
 avatar.src = user.avatarUrl;
@@ -85,3 +86,4 @@ username_element.innerText = user.username;
 personal_contributions_element.innerText = user.contributions;
 level.innerText = Math.floor(user.contributions / 10);
 class_contributions.innerText = `${(user.contributions / scores[user.classNo - 1].score * 100).toFixed(1)}%`;
+githubLink.href = `https://github.com/${user.username}`;
