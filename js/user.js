@@ -1,7 +1,40 @@
+import env from "./env.js";
+
 // 로컬스토리지에서 점수 및 깃허브 사용자 캐시 불러오기
 let scores = localStorage.getItem("scores");
 let data = localStorage.getItem("gh-cache");
 const view_user = localStorage.getItem("view-user");
+
+// openai api 이용 시 사용할 헤더 정의
+const headers = {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${env.OPENAI_KEY}`
+}
+
+const generateAnalysis = async (username) => {
+    const user_grass_data = await(await fetch(`https://github-contributions-api.jogruber.de/v4/${username}`)).json();
+    user_grass_data.contributions = user_grass_data.contributions.slice(0, 365);
+    // openai api를 이용해 데이터 가져오기
+    const res = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+            model: "gpt-4.1-nano",
+            "input": `
+                아래에 깃허브 사용자의 잔디 로그를 보고 최근 잔디 상태를 분석해서 커밋 전략을 수립해줘.
+                (현재 날짜: ${new Date().toISOString()})
+                위의 현재 날짜를 기반으로 최근 커밋을 분석하고, 분석 대상자가 고1이라는걸 감안해서 작성해줘.
+                글자는 200자 이하로 작성해줘. (마크다운 형식이 아닌 줄글 형식으로 핵심 요약을 해줘)
+                
+                데이터:
+                ${JSON.stringify(user_grass_data)}
+            `
+        }),
+    })
+    if(!res.ok) alert("AI 생성 중 오류가 발생했습니다.");
+    const body = await res.json();
+    return body.output[0].content[0].text
+}
 
 // 예외 처리를 위한 플래그 (기본: false)
 let flag = false;
@@ -25,11 +58,17 @@ if(view_user){
     if(data[view_user]) {
         user = data[view_user];
         document.getElementById("grass").src = `https://ghchart.rshah.org/${view_user}`;
+        setTimeout(async() => {
+            document.getElementById("user-details__ai-analysis").innerText = await generateAnalysis(view_user);
+        })
     }
     localStorage.removeItem("view-user");
 } else {
     user = data[username];
     document.getElementById("grass").src = `https://ghchart.rshah.org/${username}`;
+    setTimeout(async() => {
+        document.getElementById("user-details__ai-analysis").innerText = await generateAnalysis(username);
+    })
 }
 
 
