@@ -12,7 +12,7 @@ const logoutBtn = document.getElementById("logout");
 if(username){
     logoutBtn.style.display = "block";
     logoutBtn.addEventListener("click", () => {
-        alert("로그아웃되었습니다.")
+        alert("로그아웃 되었습니다.")
         localStorage.removeItem("username")
         window.location.href = "./main.html";
     })
