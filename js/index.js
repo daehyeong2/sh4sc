@@ -72,6 +72,7 @@ const classmate = [
     [
         "seunga418",
         "itzjb",
+        "minjae31"
     ],
     // 4반 Github IDs
     [
