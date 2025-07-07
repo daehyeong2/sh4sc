@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>성장 그래프 | 새싹</title>
+  <!-- 공통 레이아웃 스타일, 사용자 페이지 전용 스타일 -->
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/growth_graph.css">
+</head>
+<body>
+<!-- 상단 헤더: 로고와 제목 클릭 시 메인으로 이동 -->
+<header>
+  <a href="./main.html">
+    <img class="logo" src="../images/logo.png" alt="logo" />
+    <h1>Sh4sc</h1>
+  </a>
+  <button id="logout">로그아웃</button>
+</header>
+<!-- 메인 콘텐츠 영역 -->
+<main>
+  <div style="width: 800px;"><canvas id="growth"></canvas></div>
+</main>
+<!-- 하단 푸터 -->
+<footer>
+  <p>&copy; Sh4sc 2025 All rights reserved</p>
+  <ul>
+    <li>개인정보처리방침</li>
+    <li>이용약관</li>
+  </ul>
+</footer>
+<!-- 하단 고정 내비게이션 -->
+<nav>
+  <ul>
+    <li>
+      AI 분석
+    </li>
+    <li>
+      <a href="./rank.html">
+        개인 랭킹
+      </a>
+    </li>
+    <li id="home-button">
+      <a href="./main.html">
+        <img src="../images/logo.png" alt="home-button" />
+      </a>
+    </li>
+    <li>
+      <a href="./user.html">마이 페이지</a>
+    </li>
+    <li>
+      <a href="./growth_graph.html">성장 그래프</a>
+    </li>
+  </ul>
+</nav>
+<!-- JS 연결 -->
+<script src="../js/main.js"></script>
+<script type="module" src="../js/growth_graph.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"></script>
+</body>
+</html>
