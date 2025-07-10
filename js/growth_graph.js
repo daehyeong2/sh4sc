@@ -1,5 +1,10 @@
 const username = localStorage.getItem("username");
-if(!username) window.location.href = "../html/main.html";
+if(!username) {
+    alert("로그인 후 이용해 주세요!");
+    window.location.href = "../html/main.html";
+}
+
+document.querySelector(".title").innerText = `${username}님의 성장 여정을 살펴보아요!`;
 
 (async function() {
     const user_grass_data = await(await fetch(`https://github-contributions-api.jogruber.de/v4/${username}`)).json();
@@ -22,7 +27,11 @@ if(!username) window.location.href = "../html/main.html";
                         pointStyle: false
                     }
                 ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
             }
-        }
+        },
     );
 })();
